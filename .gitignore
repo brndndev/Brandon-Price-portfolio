@@ -1,0 +1,78 @@
+# -------------------------
+# OS-Specific
+# -------------------------
+.DS_Store
+Thumbs.db
+
+# -------------------------
+# Python
+# -------------------------
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+*.egg
+*.egg-info/
+.env
+.venv
+env/
+venv/
+ENV/
+.ipynb_checkpoints/
+*.ipynb_checkpoints
+
+# -------------------------
+# Node / JavaScript
+# -------------------------
+node_modules/
+npm-debug.log
+yarn-error.log
+dist/
+build/
+
+# -------------------------
+# Logs & Temporary Files
+# -------------------------
+*.log
+*.out
+*.tmp
+*.swp
+*.swo
+
+# -------------------------
+# SQL & Database
+# -------------------------
+*.sqlite
+*.db
+*.sql~    # backup files
+
+# -------------------------
+# Tableau
+# -------------------------
+*.twb.autosave
+*.twb.backup
+*.twbx.backup
+
+# -------------------------
+# Linux / Security Labs
+# -------------------------
+*.pcap
+*.key
+*.crt
+*.pem
+*.csr
+
+# -------------------------
+# Assets / Media
+# -------------------------
+*.png
+*.jpg
+*.jpeg
+*.gif
+*.svg
+*.mp4
+*.avi
+*.mov
+
+# Keep branding assets, ignore raw media
+!assets/branding/
