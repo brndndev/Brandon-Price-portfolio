@@ -1,0 +1,132 @@
+/* ================================
+   BRAND / TOKENS (your palette)
+   ================================ */
+:root{
+  --cream:#e8d8c9;   /* light accent */
+  --slate:#4b607f;   /* secondary */
+  --orange:#f3701e;  /* CTA accent */
+  --bg:#0f1115;      /* near-black background */
+  --panel:#14171d;   /* dark panel cards */
+  --text:#e6e8ee;    /* primary text */
+  --muted:#a2a7b0;   /* secondary text */
+  --border:#22262e;  /* subtle strokes */
+}
+
+/* ================================
+   BASE / RESET
+   ================================ */
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}                 /* seamless section scrolling */
+body{
+  margin:0;
+  background:var(--bg);
+  color:var(--text);
+  font-family:Inter,system-ui,-apple-system,Segoe UI,Roboto,Helvetica,Arial,sans-serif;
+  line-height:1.65;
+}
+img{max-width:100%;display:block;border-radius:12px}
+a{color:var(--cream);text-decoration:none}
+.container{width:min(1120px,92%);margin-inline:auto}
+section{scroll-margin-top:80px; padding:84px 0}  /* offset for sticky header */
+.eyebrow{color:var(--muted);text-transform:uppercase;letter-spacing:.22em;font-size:.78rem;margin:0 0 8px}
+.title{font-size:3.2rem;line-height:1.05;margin:.1em 0 .4em;font-weight:900}
+.lede{color:var(--muted)}
+.cta{
+  display:inline-block;background:var(--orange);color:#0b0d0f;
+  padding:12px 18px;border-radius:999px;font-weight:800;
+  box-shadow:0 8px 18px rgba(243,112,30,.35);
+}
+
+/* ================================
+   HEADER / NAV
+   ================================ */
+.header{
+  position:sticky; top:0; z-index:50;
+  backdrop-filter:saturate(1.1) blur(6px);
+  background:linear-gradient(180deg, rgba(15,17,21,.95), rgba(15,17,21,.75));
+  border-bottom:1px solid var(--border);
+}
+.nav{display:flex;align-items:center;justify-content:space-between;padding:14px 0}
+.brand{font-weight:900;letter-spacing:.08em}
+.links{display:flex;gap:28px}
+.links a{opacity:.9}
+.links a:hover{opacity:1}
+
+/* Burger button (mobile only by media query) */
+.burger{display:none;width:28px;height:22px;position:relative;border:0;background:transparent;cursor:pointer}
+.burger span{position:absolute;left:0;right:0;height:2px;background:#fff}
+.burger span:nth-child(1){top:0}
+.burger span:nth-child(2){top:10px}
+.burger span:nth-child(3){bottom:0}
+
+/* ================================
+   ABOUT (two-column hero)
+   ================================ */
+.about{
+  display:grid;grid-template-columns:1.1fr .9fr;gap:48px;align-items:center;
+}
+.about__portrait{aspect-ratio:4/5;object-fit:cover;background:#1a1f27}
+
+/* ================================
+   PROJECTS (cards grid)
+   ================================ */
+.projects .grid{
+  display:grid;grid-template-columns:repeat(3,1fr);gap:24px;
+}
+.card{
+  background:var(--panel);border:1px solid var(--border);
+  border-radius:14px;overflow:hidden;display:flex;flex-direction:column;
+}
+.card__thumb{aspect-ratio:16/10;object-fit:cover;background:#1f242c}
+.card__body{padding:16px}
+.card__title{margin:0 0 8px;font-size:1.12rem}
+.card__tags{display:flex;flex-wrap:wrap;gap:6px}
+.chip{
+  display:inline-block;font-size:.72rem;color:var(--cream);
+  border:1px solid var(--border);border-radius:999px;padding:3px 10px;
+  background:linear-gradient(90deg,rgba(75,96,127,.15),rgba(243,112,30,.15));
+}
+.card__view{
+  margin-top:auto;border-top:1px solid var(--border);padding:12px 16px;
+  display:flex;justify-content:space-between;align-items:center;color:var(--cream);
+}
+
+/* ================================
+   CONTACT (info + form)
+   ================================ */
+.contact__grid{display:grid;grid-template-columns:1fr 1fr;gap:40px;align-items:start}
+.panel{
+  background:rgba(20,23,29,.72);border:1px solid var(--border);
+  border-radius:16px;padding:20px;
+}
+.list{margin:0;padding:0;list-style:none;color:var(--muted)}
+.list li{margin:10px 0}
+
+label{display:block;margin:10px 0 6px;color:var(--cream);font-size:.9rem}
+input,textarea{
+  width:100%;background:#0b0d11;color:#fff;border:1px solid var(--border);
+  border-radius:12px;padding:12px 14px;outline:0;
+}
+input:focus,textarea:focus{border-color:var(--slate);box-shadow:0 0 0 3px rgba(75,96,127,.25)}
+
+/* ================================
+   FOOTER
+   ================================ */
+.footer{border-top:1px solid var(--border);background:#0b0d11;padding:28px 0;color:var(--muted);text-align:center}
+
+/* ================================
+   RESPONSIVE BREAKPOINTS
+   ================================ */
+@media (max-width:980px){
+  .about,.projects .grid,.contact__grid{grid-template-columns:1fr}
+  .title{font-size:2.4rem}
+}
+@media (max-width:640px){
+  /* Turn on burger; show collapsed menu when .is-open is applied by JS */
+  .links{display:none}
+  .links.is-open{
+    display:flex;flex-direction:column;gap:0;border-top:1px solid var(--border);
+    position:absolute;left:0;right:0;top:100%;background:#0f1115;padding:10px 4%;
+  }
+  .burger{display:block}
+}

@@ -1,20 +1,196 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My Web Page</title>
-    <link rel="stylesheet" href="styles.css">
+  <!-- ===== META / HEAD =====
+       - Character set + responsive viewport
+       - Title and Google Font
+       - Link to external CSS (styles.css)
+  -->
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Brandon Price — Portfolio</title>
+
+  <!-- Typeface similar to bold, minimal look -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800;900&display=swap" rel="stylesheet">
+
+  <!-- External stylesheet -->
+  <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <header>
-        <h1>My Portfolio</h1>
-    </header>
-    <main>
-        <p>This is my Portfolio</p>
-    </main>
-    <footer>
-        <p>&copy; 2024 My Web Page</p>
-    </footer>
+
+  <!-- ===== SITE HEADER / NAV =====
+       - Sticky header with brand (left) + anchor links (right)
+       - Burger button appears on mobile
+  -->
+  <header class="header">
+    <div class="container nav">
+      <a class="brand" href="#about" aria-label="Go to About">HE</a>
+
+      <!-- Navigation links -->
+      <nav class="links" id="navLinks">
+        <a href="#about">About</a>
+        <a href="#projects">Projects</a>
+        <a href="#contact">Contact</a>
+      </nav>
+
+      <!-- Burger menu toggles links on small screens -->
+      <button class="burger" id="burger" aria-label="Toggle navigation">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </header>
+
+  <main>
+    <!-- ===== SECTION 1: ABOUT ME =====
+         - Two-column hero: left copy (eyebrow, name, lede, CTA)
+           + right portrait (4:5 ratio)
+         - Smooth-scroll target id="about"
+    -->
+    <section id="about" class="container about">
+      <div class="about__copy">
+        <p class="eyebrow">I am</p>
+        <h1 class="title">BRANDON PRICE</h1>
+        <p class="lede">
+          Baltimore-based photographer & data/tech creative. I design clean, minimal
+          experiences and craft visuals for brands, artists, and products.
+        </p>
+        <a class="cta" href="#projects">View Projects</a>
+      </div>
+
+      <!-- Replace with your own image (prefer 4:5 portrait) -->
+      <img
+        class="about__portrait"
+        src="https://images.unsplash.com/photo-1544006659-f0b21884ce1d?q=80&w=1200&auto=format&fit=crop"
+        alt="Portrait of Brandon Price"
+      />
+    </section>
+
+    <!-- ===== SECTION 2: PROJECTS =====
+         - Title + 3-card grid
+         - Each card: image, tags, title, and a "View Project" link area
+    -->
+    <section id="projects" class="container projects">
+      <p class="eyebrow">Selected Work</p>
+      <h2 class="title">My Portfolio</h2>
+
+      <div class="grid">
+        <!-- Project Card 1 -->
+        <article class="card">
+          <img class="card__thumb"
+               src="https://images.unsplash.com/photo-1498050108023-c5249f4df085?q=80&w=1200&auto=format&fit=crop"
+               alt="Editorial portrait series cover" />
+          <div class="card__body">
+            <h3 class="card__title">Editorial Portrait Series</h3>
+            <div class="card__tags">
+              <span class="chip">Photography</span>
+              <span class="chip">Retouching</span>
+            </div>
+          </div>
+          <a class="card__view" href="#" aria-label="Open Editorial Portrait Series">
+            <span>View Project</span> <span aria-hidden="true">→</span>
+          </a>
+        </article>
+
+        <!-- Project Card 2 -->
+        <article class="card">
+          <img class="card__thumb"
+               src="https://images.unsplash.com/photo-1517245386807-bb43f82c33c4?q=80&w=1200&auto=format&fit=crop"
+               alt="Product branding shoot cover" />
+          <div class="card__body">
+            <h3 class="card__title">Product / Branding Shoot</h3>
+            <div class="card__tags">
+              <span class="chip">Product</span>
+              <span class="chip">Lighting</span>
+            </div>
+          </div>
+          <a class="card__view" href="#" aria-label="Open Product / Branding Shoot">
+            <span>View Project</span> <span aria-hidden="true">→</span>
+          </a>
+        </article>
+
+        <!-- Project Card 3 -->
+        <article class="card">
+          <img class="card__thumb"
+               src="https://images.unsplash.com/photo-1487014679447-9f8336841d58?q=80&w=1200&auto=format&fit=crop"
+               alt="Interactive data story cover" />
+          <div class="card__body">
+            <h3 class="card__title">Interactive Data Story</h3>
+            <div class="card__tags">
+              <span class="chip">Analytics</span>
+              <span class="chip">Web</span>
+            </div>
+          </div>
+          <a class="card__view" href="#" aria-label="Open Interactive Data Story">
+            <span>View Project</span> <span aria-hidden="true">→</span>
+          </a>
+        </article>
+      </div>
+    </section>
+
+    <!-- ===== SECTION 3: CONTACT =====
+         - Two-column layout: info panel + form panel
+         - Form is static (action="#") so it works on GitHub Pages;
+           swap action for your backend later
+    -->
+    <section id="contact" class="container contact">
+      <p class="eyebrow">Get in touch</p>
+      <h2 class="title">Contact</h2>
+
+      <div class="contact__grid">
+        <!-- Left: Info Panel -->
+        <aside class="panel">
+          <h3>Let's collaborate</h3>
+          <p class="lede">
+            For bookings, collaborations, or project inquiries, drop a message.
+            I usually reply within 24–48 hours.
+          </p>
+          <ul class="list">
+            <li><strong>Location:</strong> Baltimore, MD</li>
+            <li><strong>Email:</strong> <a href="mailto:orngchnl@gmail.com">orngchnl@gmail.com</a></li>
+            <li><strong>Instagram:</strong> <a href="https://instagram.com/orngchnl" target="_blank" rel="noreferrer">@orngchnl</a></li>
+          </ul>
+        </aside>
+
+        <!-- Right: Contact Form -->
+        <form class="panel" action="#" method="post">
+          <h3>Contact Form</h3>
+
+          <label for="name">Your name</label>
+          <input id="name" name="name" placeholder="Jane Doe" required />
+
+          <label for="email">Your email</label>
+          <input id="email" name="email" type="email" placeholder="you@example.com" required />
+
+          <label for="message">Message</label>
+          <textarea id="message" name="message" rows="6" placeholder="Tell me about your project…" required></textarea>
+
+          <button class="cta" type="submit">Send Message</button>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <!-- ===== FOOTER =====
+       - Simple copyright with current year filled by JS
+  -->
+  <footer class="footer">
+    <div class="container">© <span id="y"></span> Brandon Price — ORNGCHNL</div>
+  </footer>
+
+  <!-- ===== SMALL JS =====
+       - Smooth burger menu toggle on mobile
+       - Current year injection for footer
+  -->
+  <script>
+    // Mobile nav toggle
+    const burger = document.getElementById('burger');
+    const links  = document.getElementById('navLinks');
+    burger?.addEventListener('click', () => links.classList.toggle('is-open'));
+
+    // Dynamic year
+    document.getElementById('y').textContent = new Date().getFullYear();
+  </script>
 </body>
 </html>
