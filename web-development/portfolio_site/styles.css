@@ -1,22 +1,40 @@
-/* ================================
-   BRAND / TOKENS (your palette)
-   ================================ */
-:root{
-  --cream:#e8d8c9;   /* light accent */
-  --slate:#4b607f;   /* secondary */
-  --orange:#f3701e;  /* CTA accent */
-  --bg:#0f1115;      /* near-black background */
-  --panel:#14171d;   /* dark panel cards */
-  --text:#e6e8ee;    /* primary text */
-  --muted:#a2a7b0;   /* secondary text */
-  --border:#22262e;  /* subtle strokes */
+/* ===============================
+   THEME TOKENS (Dark/Light)
+   - Variables live under body[data-theme]
+   - Toggle via JS to switch entire palette
+   =============================== */
+
+/* ---- Dark (default) ---- */
+body[data-theme="dark"]{
+  --cream:#e8d8c9;         /* light accent */
+  --slate:#4b607f;         /* secondary accent */
+  --orange:#f3701e;        /* CTA accent */
+  --bg:#0f1115;            /* near-black */
+  --panel:#14171d;         /* panels/cards */
+  --text:#e6e8ee;          /* primary text */
+  --muted:#a2a7b0;         /* secondary text */
+  --border:#22262e;        /* subtle outline */
+  --shadow: 0 10px 24px rgba(0,0,0,.35);
 }
 
-/* ================================
+/* ---- Light ---- */
+body[data-theme="light"]{
+  --cream:#3b3b3b;
+  --slate:#4b607f;
+  --orange:#f3701e;
+  --bg:#ffffff;
+  --panel:#f5f6f8;
+  --text:#0c0e12;
+  --muted:#616774;
+  --border:#dcdfe5;
+  --shadow: 0 10px 22px rgba(0,0,0,.08);
+}
+
+/* ===============================
    BASE / RESET
-   ================================ */
+   =============================== */
 *{box-sizing:border-box}
-html{scroll-behavior:smooth}                 /* seamless section scrolling */
+html{scroll-behavior:smooth}
 body{
   margin:0;
   background:var(--bg);
@@ -25,108 +43,160 @@ body{
   line-height:1.65;
 }
 img{max-width:100%;display:block;border-radius:12px}
-a{color:var(--cream);text-decoration:none}
+a{color:var(--slate);text-decoration:none}
+a:hover{opacity:.9}
 .container{width:min(1120px,92%);margin-inline:auto}
-section{scroll-margin-top:80px; padding:84px 0}  /* offset for sticky header */
+.section{padding:84px 0}
 .eyebrow{color:var(--muted);text-transform:uppercase;letter-spacing:.22em;font-size:.78rem;margin:0 0 8px}
-.title{font-size:3.2rem;line-height:1.05;margin:.1em 0 .4em;font-weight:900}
+.title{font-size:2.6rem;line-height:1.1;margin:.1em 0 .4em;font-weight:900}
+.title.small{font-size:2rem}
 .lede{color:var(--muted)}
+.muted{color:var(--muted)}
 .cta{
   display:inline-block;background:var(--orange);color:#0b0d0f;
   padding:12px 18px;border-radius:999px;font-weight:800;
   box-shadow:0 8px 18px rgba(243,112,30,.35);
 }
 
-/* ================================
+/* ===============================
    HEADER / NAV
-   ================================ */
-.header{
-  position:sticky; top:0; z-index:50;
+   - Flex row with brand, links, controls
+   - Sticky with subtle blur
+   =============================== */
+.site-header{
+  position:sticky; top:0; z-index:40;
   backdrop-filter:saturate(1.1) blur(6px);
-  background:linear-gradient(180deg, rgba(15,17,21,.95), rgba(15,17,21,.75));
-  border-bottom:1px solid var(--border);
+  background:linear-gradient(180deg, rgba(0,0,0,.12), rgba(0,0,0,0));
+  padding:10px 0;
 }
-.nav{display:flex;align-items:center;justify-content:space-between;padding:14px 0}
-.brand{font-weight:900;letter-spacing:.08em}
-.links{display:flex;gap:28px}
-.links a{opacity:.9}
-.links a:hover{opacity:1}
-
-/* Burger button (mobile only by media query) */
-.burger{display:none;width:28px;height:22px;position:relative;border:0;background:transparent;cursor:pointer}
-.burger span{position:absolute;left:0;right:0;height:2px;background:#fff}
-.burger span:nth-child(1){top:0}
+.nav{
+  display:flex; align-items:center; gap:16px; justify-content:space-between;
+}
+.brand{font-weight:900; letter-spacing:.08em; color:var(--text)}
+.nav-links{display:flex; gap:28px}
+.nav-links a{color:var(--cream)}
+.btn.icon{background:transparent;border:1px solid var(--border);border-radius:10px;color:var(--text);padding:8px;cursor:pointer}
+.btn.icon:hover{background:var(--panel)}
+.burger{display:none; position:relative; width:28px; height:22px}
+.burger span{position:absolute; left:6px; right:6px; height:2px; background:var(--text)}
+.burger span:nth-child(1){top:4px}
 .burger span:nth-child(2){top:10px}
-.burger span:nth-child(3){bottom:0}
+.burger span:nth-child(3){bottom:4px}
 
-/* ================================
-   ABOUT (two-column hero)
-   ================================ */
-.about{
-  display:grid;grid-template-columns:1.1fr .9fr;gap:48px;align-items:center;
+/* small-screen nav open state */
+.nav-links.open{
+  position:absolute; left:0; right:0; top:100%;
+  background:var(--panel); border-top:1px solid var(--border);
+  padding:10px 4%; display:flex; flex-direction:column; gap:6px;
 }
-.about__portrait{aspect-ratio:4/5;object-fit:cover;background:#1a1f27}
 
-/* ================================
-   PROJECTS (cards grid)
-   ================================ */
-.projects .grid{
-  display:grid;grid-template-columns:repeat(3,1fr);gap:24px;
+/* ===============================
+   FLEX CARDS LAYOUT (outer)
+   - Profile card and About card sit side-by-side
+   - Flex-wrap makes it stack on smaller screens
+   =============================== */
+.cards-flex{
+  display:flex; flex-wrap:wrap; gap:24px; align-items:stretch;
 }
 .card{
-  background:var(--panel);border:1px solid var(--border);
-  border-radius:14px;overflow:hidden;display:flex;flex-direction:column;
+  background:var(--panel); border:1px solid var(--border);
+  border-radius:16px; padding:20px; box-shadow:var(--shadow);
+  flex: 1 1 420px;          /* min reasonable width; grows evenly */
+  display:flex; flex-direction:column; gap:12px;
 }
-.card__thumb{aspect-ratio:16/10;object-fit:cover;background:#1f242c}
-.card__body{padding:16px}
-.card__title{margin:0 0 8px;font-size:1.12rem}
-.card__tags{display:flex;flex-wrap:wrap;gap:6px}
+
+/* ===============================
+   PROFILE CARD (inner layout)
+   - Flex row: image | content (wraps on narrow)
+   =============================== */
+.profile-inner{
+  display:flex; gap:16px; align-items:flex-start; flex-wrap:wrap;
+}
+.profile-photo{
+  width:220px; max-width:42vw; aspect-ratio:4/5; object-fit:cover; background:#1a1f27;
+  border-radius:14px; box-shadow:var(--shadow);
+}
+.profile-content{flex:1 1 260px; min-width:260px}
+.hello{line-height:1; font-weight:900; letter-spacing:.02em}
+.hello-light{font-size:2.4rem; color:var(--text)}
+.hello-accent{font-size:2.4rem; color:var(--orange); margin-left:4px}
+.name{margin:.25rem 0 0; font-size:1.6rem}
+.role{margin:0; color:var(--muted); font-weight:600}
+.bio{margin:.35rem 0 0}
+.links-row{display:flex; flex-wrap:wrap; gap:8px; margin-top:8px}
 .chip{
-  display:inline-block;font-size:.72rem;color:var(--cream);
-  border:1px solid var(--border);border-radius:999px;padding:3px 10px;
-  background:linear-gradient(90deg,rgba(75,96,127,.15),rgba(243,112,30,.15));
+  display:inline-block; font-size:.85rem; color:var(--cream);
+  border:1px solid var(--border); border-radius:999px; padding:8px 12px;
+  background:linear-gradient(90deg, rgba(75,96,127,.12), rgba(243,112,30,.12));
 }
-.card__view{
-  margin-top:auto;border-top:1px solid var(--border);padding:12px 16px;
-  display:flex;justify-content:space-between;align-items:center;color:var(--cream);
-}
+.chip.solid{background:var(--orange); color:#0b0d0f; border-color:transparent}
+.chip.outline{background:transparent; border-color:var(--slate)}
+.focus-tags{display:flex; flex-wrap:wrap; gap:6px; margin-top:6px}
+.tag{font-size:.75rem; border:1px solid var(--border); border-radius:20px; padding:4px 10px; color:var(--cream)}
 
-/* ================================
-   CONTACT (info + form)
-   ================================ */
-.contact__grid{display:grid;grid-template-columns:1fr 1fr;gap:40px;align-items:start}
-.panel{
-  background:rgba(20,23,29,.72);border:1px solid var(--border);
-  border-radius:16px;padding:20px;
-}
-.list{margin:0;padding:0;list-style:none;color:var(--muted)}
-.list li{margin:10px 0}
+/* ===============================
+   ABOUT CARD
+   =============================== */
+.about-card .bullets{margin:0; padding-left:18px}
+.about-card .bullets li{margin:.4rem 0}
 
-label{display:block;margin:10px 0 6px;color:var(--cream);font-size:.9rem}
-input,textarea{
-  width:100%;background:#0b0d11;color:#fff;border:1px solid var(--border);
-  border-radius:12px;padding:12px 14px;outline:0;
-}
-input:focus,textarea:focus{border-color:var(--slate);box-shadow:0 0 0 3px rgba(75,96,127,.25)}
+/* ===============================
+   PROJECT CARDS
+   - Media banner uses gradient tints hinting category
+   =============================== */
+.project{padding:0}
+.project-media{height:160px; border-bottom:1px solid var(--border); border-radius:16px 16px 0 0}
+.project-media.da{background:linear-gradient(45deg, rgba(75,96,127,.35), rgba(243,112,30,.35))}
+.project-media.sec{background:linear-gradient(45deg, rgba(100,120,160,.35), rgba(120,190,160,.30))}
+.project-media.fe{ background:linear-gradient(45deg, rgba(243,112,30,.35), rgba(75,96,127,.30))}
+.project-body{padding:16px 20px 20px}
+.row{display:flex; flex-wrap:wrap; gap:8px; margin-top:8px}
 
-/* ================================
+/* ===============================
+   CONTACT
+   =============================== */
+.contact-flex{align-items:flex-start}
+.contact-list{list-style:none; padding:0; margin:.4rem 0 0}
+.contact-list li{margin:.35rem 0}
+.contact-form label{display:block; margin:10px 0 6px; color:var(--cream); font-size:.9rem}
+.contact-form input,
+.contact-form textarea{
+  width:100%; background:transparent; color:var(--text);
+  border:1px solid var(--border); border-radius:12px; padding:12px 14px; outline:0;
+}
+.contact-form input:focus,
+.contact-form textarea:focus{
+  border-color:var(--slate); box-shadow:0 0 0 3px rgba(75,96,127,.25);
+}
+.form-title{margin:0 0 6px}
+
+/* ===============================
    FOOTER
-   ================================ */
-.footer{border-top:1px solid var(--border);background:#0b0d11;padding:28px 0;color:var(--muted);text-align:center}
-
-/* ================================
-   RESPONSIVE BREAKPOINTS
-   ================================ */
-@media (max-width:980px){
-  .about,.projects .grid,.contact__grid{grid-template-columns:1fr}
-  .title{font-size:2.4rem}
+   =============================== */
+.site-footer{
+  border-top:1px solid var(--border);
+  padding:28px 0; color:var(--muted); text-align:center;
 }
-@media (max-width:640px){
-  /* Turn on burger; show collapsed menu when .is-open is applied by JS */
-  .links{display:none}
-  .links.is-open{
-    display:flex;flex-direction:column;gap:0;border-top:1px solid var(--border);
-    position:absolute;left:0;right:0;top:100%;background:#0f1115;padding:10px 4%;
-  }
+
+/* ===============================
+   RESPONSIVE BREAKPOINTS
+   - Burger appears under 720px
+   - Typography scales down for smaller screens
+   =============================== */
+@media (max-width: 980px){
+  .title{font-size:2.2rem}
+  .profile-photo{width:180px}
+}
+@media (max-width: 720px){
   .burger{display:block}
+  .nav-links{display:none}
+  .nav-links.open{display:flex}
+}
+@media (max-width: 520px){
+  .hello-light,.hello-accent{font-size:2rem}
+  .profile-photo{width:150px}
+}
+@media (orientation:landscape) and (max-height: 480px){
+  /* keep cards comfortable in short landscape on phones */
+  .section{padding:56px 0}
 }
