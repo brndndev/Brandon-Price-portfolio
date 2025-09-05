@@ -48,6 +48,72 @@
            + right portrait (4:5 ratio)
          - Smooth-scroll target id="about"
     -->
+
+    <!-- ===== PROFILE CARD (placed above Section 1: About Me) =====
+     - Compact hero-style card with photo, big greeting, quick bio
+     - Action chips for Email / Portfolio / Instagram / Phone
+     - Mini info grid (Education / Experience / Skills / Tools)
+-->
+<section id="profile" class="container profile-card">
+
+  <!-- Left: Portrait -->
+  <div class="pcard__media">
+    <!-- Replace with your own image -->
+    <img
+      src="https://images.unsplash.com/photo-1502685104226-ee32379fefbe?q=80&w=1200&auto=format&fit=crop"
+      alt="Portrait of Brandon Price"
+      class="pcard__img"
+    />
+  </div>
+
+  <!-- Right: Content -->
+  <div class="pcard__body">
+    <!-- Greeting headline (inspired by your reference “HELLO!”) -->
+    <div class="pcard__hello">
+      <span class="pcard__hello-light">HEL</span><span class="pcard__hello-accent">LO!</span>
+    </div>
+
+    <!-- Name + role -->
+    <h2 class="pcard__name">Brandon Price</h2>
+    <p class="pcard__role">Photographer • UI/UX • Data-driven Creative</p>
+
+    <!-- Short bio -->
+    <p class="pcard__bio">
+      Baltimore-based creative focused on fashion/editorial, product visuals, and clean digital
+      experiences. I blend design, photography, and analytics to tell sharp, minimal stories.
+    </p>
+
+    <!-- Action chips (email/portfolio/instagram/phone) -->
+    <div class="pcard__actions">
+      <a class="chip chip--solid" href="mailto:orngchnl@gmail.com">orngchnl@gmail.com</a>
+      <a class="chip" href="https://www.behance.net/" target="_blank" rel="noreferrer">behance.net/orngchnl</a>
+      <a class="chip" href="https://instagram.com/orngchnl" target="_blank" rel="noreferrer">@orngchnl</a>
+      <a class="chip chip--outline" href="tel:+14435551234">(+1) 443-555-1234</a>
+    </div>
+
+    <!-- Mini info grid (mirrors sections in the reference card) -->
+    <div class="pcard__mini">
+      <div class="mini">
+        <h4 class="mini__title">Education</h4>
+        <p class="mini__text">BS, Visual Communication (Baltimore)</p>
+      </div>
+      <div class="mini">
+        <h4 class="mini__title">Experience</h4>
+        <p class="mini__text">5+ yrs freelance • Brand & Editorial</p>
+      </div>
+      <div class="mini">
+        <h4 class="mini__title">Skills</h4>
+        <p class="mini__text">Lighting, Retouching, UI, Web</p>
+      </div>
+      <div class="mini">
+        <h4 class="mini__title">Tools</h4>
+        <p class="mini__text">Ps • Lr • Pr • Figma</p>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- ===== END PROFILE CARD ===== -->
+ 
     <section id="about" class="container about">
       <div class="about__copy">
         <p class="eyebrow">I am</p>
