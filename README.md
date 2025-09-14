@@ -86,3 +86,63 @@ Theme colors: cream #e8d8c9, slate #4b607f, orange #f3701e, bg #0f1115
 
 ## 🧰 Inventory (Tech Stack)
 Python • SQL (SQLite/Postgres) • pandas • Tableau • HTML • CSS • JavaScript • Git • Linux (Kali)
+
+## 📜 Quest Log (Experience → Impact)
+- **Transportation Manager → Tech**  
+  Turned real-world ops problems into practical data/automation + security learning.
+- **Data Projects**  
+  SQL pipelines + pandas transforms; dashboards that answer real questions.
+- **Security Practice**  
+  Blue-team habits: triage playbooks, logs first, minimize risk, document IOCs.
+- **Front-End**  
+  Mobile-first layouts, accessible components, performance basics.
+
+<p align="center">
+  <img src="./assets/readme/pixel-divider.svg" alt="" />
+</p>
+
+## 🗃️ Featured Projects
+
+<table>
+<tr>
+<td width="50%">
+  
+### 🎼 Digital Music Store Analysis
+End-to-end SQL + pandas analysis with Tableau story.
+
+<a href="https://github.com/brndndev" target="_blank"><img src="./assets/readme/pixel-button-secondary.svg" alt="View Repo" /></a>
+<a href="https://public.tableau.com/app/profile/brandonjprice" target="_blank"><img src="./assets/readme/pixel-button-primary.svg" alt="Open Tableau" /></a>
+
+</td>
+<td width="50%">
+
+### 🛡️ Blue-Team Log Triage
+IOC notes, checklists, and shell helpers for faster evidence review.
+
+<a href="https://medium.com/@brndndev" target="_blank"><img src="./assets/readme/pixel-button-secondary.svg" alt="Read Write-ups" /></a>
+<a href="https://github.com/brndndev" target="_blank"><img src="./assets/readme/pixel-button-primary.svg" alt="Open Tools" /></a>
+
+</td>
+</tr>
+</table>
+
+> Want a quick overview? Check the **Projects** folder and the **Issues** tab for roadmaps.
+
+<p align="center">
+  <img src="./assets/readme/pixel-divider.svg" alt="" />
+</p>
+
+## 🛰️ Warp Portals (All Links)
+- **LinkedIn:** https://www.linkedin.com/in/brandon-j-price  
+- **GitHub:** https://github.com/brndndev  
+- **Portfolio Hub:** https://datascienceportfol.io/brndndev  
+- **Medium:** https://medium.com/@brndndev  
+- **Tableau Public:** https://public.tableau.com/app/profile/brandonjprice  
+- **Discord:** brndndev
+
+---
+
+
+
+
+
