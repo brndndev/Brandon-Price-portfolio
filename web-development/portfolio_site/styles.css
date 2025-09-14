@@ -200,3 +200,10 @@ a:hover{opacity:.9}
   /* keep cards comfortable in short landscape on phones */
   .section{padding:56px 0}
 }
+/* Header resume button */
+.btn.resume{
+  display:inline-block; padding:8px 14px; border-radius:999px;
+  border:1px solid var(--border); background:var(--panel); color:var(--cream);
+  margin-left:12px;
+}
+.btn.resume:hover{ background:var(--orange); color:#0b0d0f; border-color:transparent }
