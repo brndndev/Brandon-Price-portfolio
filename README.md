@@ -1,148 +1,131 @@
 <!--
-Brandon-Price-portfolio — Pixel/Tower-of-Fantasy inspired README
-Theme colors: cream #e8d8c9, slate #4b607f, orange #f3701e, bg #0f1115
+Brandon-Price-portfolio — README UI inspired by the attached mock
+No external CSS; uses GitHub-safe HTML + Markdown and badges.
 -->
 
 <p align="center">
-  <img src="./assets/readme/pixel-divider.svg" alt="" />
+  <a href="#about-me">About</a> ·
+  <a href="#projects">Projects</a> ·
+  <a href="#contact">Contact</a>
+  &nbsp;&nbsp;|&nbsp;&nbsp;
+  <a href="web-development/portfolio_site/Brandon-Price-Resume.pdf">
+    <img alt="Download Resume" src="https://img.shields.io/badge/Download%20Resume-–-f3701e?style=for-the-badge&labelColor=14171d&color=f3701e">
+  </a>
 </p>
 
-<h1 align="center">⚔️ Brandon J. Price — Tech Portfolio</h1>
-<p align="center">
-  <b>Data Analysis • Cybersecurity • Front-End Web Development</b><br/>
-  <sub>From Transportation Ops → to building data-driven, secure, and accessible experiences.</sub>
-</p>
-
-<p align="center">
-  <!-- quick portals -->
-  <a href="https://www.linkedin.com/in/brandon-j-price"><img src="https://img.shields.io/badge/LinkedIn-Profile-0A66C2?logo=linkedin&labelColor=0a66c2&color=0a66c2&logoColor=white"></a>
-  <a href="https://github.com/brndndev"><img src="https://img.shields.io/badge/GitHub-brndndev-181717?logo=github&labelColor=181717"></a>
-  <a href="https://datascienceportfol.io/brndndev"><img src="https://img.shields.io/badge/Portfolio-Hub-f3701e?logo=firefoxbrowser&labelColor=14171d&color=f3701e&logoColor=white"></a>
-  <a href="https://medium.com/@brndndev"><img src="https://img.shields.io/badge/Medium-Articles-000000?logo=medium&labelColor=14171d"></a>
-  <a href="https://public.tableau.com/app/profile/brandonjprice"><img src="https://img.shields.io/badge/Tableau-Dashboards-E97627?logo=tableau&labelColor=14171d&logoColor=E97627"></a>
-  <img src="https://img.shields.io/badge/Discord-brndndev-5865F2?logo=discord&labelColor=14171d&logoColor=5865F2">
-</p>
-
-<p align="center">
-  <img src="./assets/readme/pixel-divider.svg" alt="" />
-</p>
-
-## 🗺️ Choose Your Path
-> Select a specialization to expand its “quest log”.
-
-<details>
-  <summary><b>📊 Data Analysis</b> — SQL • Python (pandas) • Tableau</summary>
-
-  **Highlights**
-  - End-to-end analysis on a digital music store dataset (SQL + pandas) with **Tableau** storytelling.
-  - Clean, reproducible queries and lightweight viz.
-
-  **Links**
-  - <a href="https://github.com/brndndev" target="_blank">Repository list</a>  
-  - <a href="https://public.tableau.com/app/profile/brandonjprice" target="_blank">Tableau Public</a>
-
-  **Tech**
-  <img src="https://img.shields.io/badge/Python-3.x-3776AB?logo=python&logoColor=white">
-  <img src="https://img.shields.io/badge/SQL-postgres%7Csqlite-336791?logo=postgresql&logoColor=white">
-  <img src="https://img.shields.io/badge/pandas-ready-150458?logo=pandas&logoColor=white">
-  <img src="https://img.shields.io/badge/Tableau-public-E97627?logo=tableau&logoColor=white">
-</details>
-
-<details>
-  <summary><b>🛡️ Cybersecurity</b> — GFACT • Blue-Team • Linux</summary>
-
-  **Highlights**
-  - Blue-team log triage notes, IOC checklists, and shell tooling.
-  - GFACT and hands-on labs (defensive mindset first).
-
-  **Links**
-  - <a href="https://medium.com/@brndndev" target="_blank">Investigation notes & write-ups</a>
-  - <a href="https://github.com/brndndev" target="_blank">Tools (repos)</a>
-
-  **Tech**
-  <img src="https://img.shields.io/badge/Linux-Kali-557C94?logo=linux&logoColor=white">
-  <img src="https://img.shields.io/badge/Shell-CLI-4EAA25?logo=gnubash&logoColor=white">
-  <img src="https://img.shields.io/badge/SIEM-mindset-14171d">
-</details>
-
-<details>
-  <summary><b>🧩 Front-End</b> — HTML • CSS • JavaScript</summary>
-
-  **Highlights**
-  - This portfolio: responsive Flexbox, light/dark theme, accessible patterns.
-
-  **Links**
-  - <a href="https://github.com/brndndev/Brandon-Price-portfolio" target="_blank">Portfolio source</a>
-
-  **Tech**
-  <img src="https://img.shields.io/badge/HTML5-semantic-E34F26?logo=html5&logoColor=white">
-  <img src="https://img.shields.io/badge/CSS3-accessible-1572B6?logo=css3&logoColor=white">
-  <img src="https://img.shields.io/badge/JavaScript-ES6+-F7DF1E?logo=javascript&logoColor=000">
-</details>
-
-<p align="center">
-  <img src="./assets/readme/pixel-divider.svg" alt="" />
-</p>
-
-## 🧰 Inventory (Tech Stack)
-Python • SQL (SQLite/Postgres) • pandas • Tableau • HTML • CSS • JavaScript • Git • Linux (Kali)
-
-## 📜 Quest Log (Experience → Impact)
-- **Transportation Manager → Tech**  
-  Turned real-world ops problems into practical data/automation + security learning.
-- **Data Projects**  
-  SQL pipelines + pandas transforms; dashboards that answer real questions.
-- **Security Practice**  
-  Blue-team habits: triage playbooks, logs first, minimize risk, document IOCs.
-- **Front-End**  
-  Mobile-first layouts, accessible components, performance basics.
-
-<p align="center">
-  <img src="./assets/readme/pixel-divider.svg" alt="" />
-</p>
-
-## 🗃️ Featured Projects
-
+<!-- ======= TWO-COLUMN LAYOUT (image card | about card) ======= -->
 <table>
 <tr>
-<td width="50%">
-  
-### 🎼 Digital Music Store Analysis
-End-to-end SQL + pandas analysis with Tableau story.
+<td width="48%" valign="top">
 
-<a href="https://github.com/brndndev" target="_blank"><img src="./assets/readme/pixel-button-secondary.svg" alt="View Repo" /></a>
-<a href="https://public.tableau.com/app/profile/brandonjprice" target="_blank"><img src="./assets/readme/pixel-button-primary.svg" alt="Open Tableau" /></a>
+<!-- LEFT CARD: PROFILE -->
+  
+<img src="assets/readme/profile.jpeg" alt="Brandon J. Price" width="100%" />
+
+<h2>HEL<span style="color:#f3701e;">LO!</span></h2>
+
+### Brandon J. Price
+
+**Data Analysis • Cybersecurity • Front-End Web Development**
+
+I’m transitioning from transportation management into tech. I blend data,
+security mindset, and clean UI to build useful, accessible experiences.
+
+<!-- quick link chips -->
+<p>
+  <a href="https://www.linkedin.com/in/brandon-j-price"><img alt="LinkedIn" src="https://img.shields.io/badge/LinkedIn-Profile-0A66C2?style=flat&logo=linkedin&logoColor=white&labelColor=0a66c2"></a>
+  <a href="https://github.com/brndndev"><img alt="GitHub" src="https://img.shields.io/badge/GitHub-brndndev-181717?style=flat&logo=github&labelColor=181717"></a>
+  <a href="https://datascienceportfol.io/brndndev"><img alt="Portfolio Hub" src="https://img.shields.io/badge/Portfolio%20Hub-–-4b607f?style=flat&labelColor=14171d&color=4b607f"></a>
+  <a href="https://medium.com/@brndndev"><img alt="Medium" src="https://img.shields.io/badge/Medium-Articles-000000?style=flat&logo=medium&logoColor=white&labelColor=000"></a>
+  <a href="https://public.tableau.com/app/profile/brandonjprice"><img alt="Tableau" src="https://img.shields.io/badge/Tableau-Dashboards-E97627?style=flat&logo=tableau&logoColor=white&labelColor=14171d"></a>
+  <img alt="Discord" src="https://img.shields.io/badge/Discord-brndndev-5865F2?style=flat&logo=discord&logoColor=white&labelColor=14171d">
+</p>
+
+<!-- skills chips -->
+<p>
+  <img alt="Python"  src="https://img.shields.io/badge/Python-–-3776AB?style=flat&logo=python&logoColor=white&labelColor=14171d">
+  <img alt="SQL"     src="https://img.shields.io/badge/SQL-–-336791?style=flat&logo=postgresql&logoColor=white&labelColor=14171d">
+  <img alt="Pandas"  src="https://img.shields.io/badge/pandas-–-150458?style=flat&logo=pandas&logoColor=white&labelColor=14171d">
+  <img alt="Tableau" src="https://img.shields.io/badge/Tableau-–-E97627?style=flat&logo=tableau&logoColor=white&labelColor=14171d">
+  <img alt="Security Labs" src="https://img.shields.io/badge/Security%20Labs-–-4b607f?style=flat&labelColor=14171d&color=4b607f">
+  <img alt="HTML/CSS/JS" src="https://img.shields.io/badge/HTML%2FCSS%2FJS-–-e8d8c9?style=flat&labelColor=14171d&color=e8d8c9">
+</p>
 
 </td>
-<td width="50%">
+<td width="4%"></td>
+<td width="48%" valign="top">
 
-### 🛡️ Blue-Team Log Triage
-IOC notes, checklists, and shell helpers for faster evidence review.
+<!-- RIGHT CARD: ABOUT -->
 
-<a href="https://medium.com/@brndndev" target="_blank"><img src="./assets/readme/pixel-button-secondary.svg" alt="Read Write-ups" /></a>
-<a href="https://github.com/brndndev" target="_blank"><img src="./assets/readme/pixel-button-primary.svg" alt="Open Tools" /></a>
+<h4 id="about-me">ABOUT ME</h4>
+<h2>From Logistics → Tech</h2>
+
+For years I led last-mile operations—tight deadlines, shifting priorities,
+and data-driven decisions. I now apply that discipline to building
+**analytical dashboards**, practicing **defensive security**, and shipping
+**front-end** experiences.
+
+- **Data Analysis:** SQL pipelines, Python (pandas), Tableau stories.  
+- **Cybersecurity:** GFACT, Kali labs, log analysis, blue-team mindset.  
+- **Front-End:** Responsive HTML/CSS/JS, accessible UI patterns.  
+
+<p>
+  <a href="#projects">
+    <img alt="See Projects" src="https://img.shields.io/badge/See%20Projects-–-f3701e?style=for-the-badge&labelColor=14171d&color=f3701e">
+  </a>
+</p>
 
 </td>
 </tr>
 </table>
 
-> Want a quick overview? Check the **Projects** folder and the **Issues** tab for roadmaps.
+---
 
-<p align="center">
-  <img src="./assets/readme/pixel-divider.svg" alt="" />
-</p>
+## 🧭 Quick Nav
+- [About Me](#about-me)
+- [Projects](#projects)
+- [Contact](#contact)
 
-## 🛰️ Warp Portals (All Links)
+---
+
+## 📂 Projects
+
+> Impact-oriented snapshots. Each card links to repos, dashboards, or write-ups.
+
+### 🎼 Digital Music Store SQL Analysis
+**SQL • Python • Tableau** — End-to-end analysis of sales & customer behavior with reproducible queries and a Tableau story.
+  
+[![Repo](https://img.shields.io/badge/Repository-–-4b607f?style=flat&labelColor=14171d&color=4b607f)](https://github.com/brndndev)
+[![Tableau](https://img.shields.io/badge/Tableau-Open-E97627?style=flat&logo=tableau&logoColor=white&labelColor=14171d)](https://public.tableau.com/app/profile/brandonjprice)
+
+---
+
+### 🛡️ Blue-Team Log Triage
+**GFACT • Linux • SIEM mindset** — IOC checklists and shell helpers for faster evidence review.
+  
+[![Writeups](https://img.shields.io/badge/Write--ups-–-000000?style=flat&logo=medium&logoColor=white&labelColor=000)](https://medium.com/@brndndev)
+[![Tools](https://img.shields.io/badge/Tools-–-181717?style=flat&logo=github&labelColor=181717)](https://github.com/brndndev)
+
+---
+
+### 🧩 Responsive Portfolio UI
+**HTML • CSS • JS** — This site: accessible components, light/dark, mobile-first Flexbox.
+
+[![Source](https://img.shields.io/badge/Source-–-181717?style=flat&logo=github&labelColor=181717)](https://github.com/brndndev/Brandon-Price-portfolio)
+[![Live](https://img.shields.io/badge/Live-–-f3701e?style=flat&labelColor=14171d&color=f3701e)](https://brndndev.github.io/Brandon-Price-portfolio/)
+
+---
+
+## ✉️ Contact
+
+- **Email:** <orngchnl@gmail.com>  
 - **LinkedIn:** https://www.linkedin.com/in/brandon-j-price  
 - **GitHub:** https://github.com/brndndev  
 - **Portfolio Hub:** https://datascienceportfol.io/brndndev  
 - **Medium:** https://medium.com/@brndndev  
-- **Tableau Public:** https://public.tableau.com/app/profile/brandonjprice  
+- **Tableau:** https://public.tableau.com/app/profile/brandonjprice  
 - **Discord:** brndndev
 
 ---
 
-
-
-
-
+<sub>Palette: cream #e8d8c9 · slate #4b607f · orange #f3701e · bg #0f1115</sub>
