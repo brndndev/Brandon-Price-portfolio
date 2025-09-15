@@ -20,7 +20,7 @@ No external CSS; uses GitHub-safe HTML + Markdown and badges.
 
 <!-- LEFT CARD: PROFILE -->
   
-<img src="assets/readme/profile.jpeg" alt="Brandon J. Price" width="100%" />
+<img src="assets/readme/profile.jpg" alt="Brandon J. Price" width="100%" />
 
 <h2>HEL<span style="color:#f3701e;">LO!</span></h2>
 
